@@ -1,5 +1,7 @@
 # Link de acceso para la aplicación 
 
+https://lexart-app-production.up.railway.app/
+
 *	Usuario: felipe
 *	Contraseña: 1234
 
