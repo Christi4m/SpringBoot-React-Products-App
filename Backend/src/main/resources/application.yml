@@ -1,0 +1,29 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: app-lexart
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://ep-noisy-salad-a523qtew.us-east-2.aws.neon.tech:5432/lexart_db_app?sslmode=require
+    username: lexart_db_app_owner
+    password: 2NAvH3iyKSph
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  security:
+    user:
+      name: lexart
+      password: secret
+
+jwt:
+  secret:
+    key: A9YuqwfdGi5foSOZfxhLFrU/KnghisE6F6/MSVn9qZ2atx55CBwjRR4fHaCxL95N
+  time:
+    expiration: 86400000
+
+api:
+  front:
+    url: http://localhost:5173
