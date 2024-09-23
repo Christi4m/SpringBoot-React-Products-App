@@ -63,21 +63,20 @@ public class SecurityConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
+                System.out.println("api: ".concat(apiFront));
                 registry.addMapping("/**").allowedOrigins(apiFront);
             }
         };
     }
 
 
-
     @Bean
-    PasswordEncoder passwordEncoder(){
+    PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
     @Bean
     AuthenticationManager authenticationManager(HttpSecurity httpSecurity) throws Exception {
-        System.out.println(apiFront);
         return httpSecurity.getSharedObject(AuthenticationManagerBuilder.class)
                 .userDetailsService(authApplicationService)
                 .passwordEncoder(passwordEncoder()).and().build();

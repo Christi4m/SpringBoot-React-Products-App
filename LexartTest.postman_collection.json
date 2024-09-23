@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "eb33593e-483f-4756-a400-b6d76f5229f0",
+		"name": "LexartTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10213090"
+	},
+	"item": [
+		{
+			"name": "Local",
+			"item": [
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "Get All Products",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqdWFucGVyZXoiLCJpYXQiOjE3MjcwMzk5MjUsImV4cCI6MTcyNzEyNjMyNX0.DCG3JtmvpLw4HExdsfFd5sa0SyoZryMiIPzBsHjabj0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqdWFucGVyZXoiLCJpYXQiOjE3MjcwMzk5MjUsImV4cCI6MTcyNzEyNjMyNX0.DCG3JtmvpLw4HExdsfFd5sa0SyoZryMiIPzBsHjabj0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Laptop Pro\",\r\n  \"brand\": \"TechBrand\",\r\n  \"data\": [\r\n    {\r\n      \"price\": 1299.99,\r\n      \"color\": \"Silver\"\r\n    },\r\n    {\r\n      \"price\": 1399.99,\r\n      \"color\": \"Black\"\r\n    }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"product"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Register New User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Juan Pérez\",\r\n    \"email\": \"juan.perez@example.com\",\r\n    \"username\": \"juanperez\",\r\n    \"password\": \"contraseñaSegura123\",\r\n    \"roles\": [\r\n        \"ADMIN\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"juanperez\",\r\n    \"password\": \"contraseñaSegura123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Production",
+			"item": [
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "Get All Products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://lexartapp.onrender.com/api/product",
+									"protocol": "https",
+									"host": [
+										"lexartapp",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Laptop Pro\",\r\n  \"brand\": \"TechBrand\",\r\n  \"data\": [\r\n    {\r\n      \"price\": 1299.99,\r\n      \"color\": \"Silver\"\r\n    },\r\n    {\r\n      \"price\": 1399.99,\r\n      \"color\": \"Black\"\r\n    }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://lexartapp.onrender.com/api/product",
+									"protocol": "https",
+									"host": [
+										"lexartapp",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"product"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Register New User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Juan Pérez\",\r\n    \"email\": \"juan.perez@example.com\",\r\n    \"username\": \"juanperez\",\r\n    \"password\": \"contraseñaSegura123\",\r\n    \"roles\": [\r\n        \"ADMIN\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://lexartapp.onrender.com/api/auth/register",
+									"protocol": "https",
+									"host": [
+										"lexartapp",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"juanperez\",\r\n    \"password\": \"contraseñaSegura123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://lexartapp.onrender.com/api/auth/login",
+									"protocol": "https",
+									"host": [
+										"lexartapp",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
